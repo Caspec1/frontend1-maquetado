@@ -10,6 +10,10 @@ p {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Header */
 
 .only-desktop {
@@ -51,6 +55,7 @@ p {
 .logo {
   display: flex;
   align-items: center;
+  color: #3C2313;
 }
 
 .logo .img {
@@ -105,13 +110,26 @@ ul {
   color: #fff;
 }
 
-ul li {
+li {
+  display: flex;
+}
+
+li a {
+  color: #fff;
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 5px;
+  transition-property: scale color;
+  transition-duration: 300ms;
 }
 
-ul li img {
+li a:hover {
+  scale: 1.1;
+  color: #3C2313;
+}
+
+li img {
   width: 15px;
   height: 15px;
 }
@@ -168,12 +186,20 @@ ul li img {
 }
 
 .hero-button {
-  all: unset;
+  border: none;
   padding: 15px;
   font-size: 20px;
   background-color: #F0A83E;
   color: #fff;
   border-radius: 5px;
+  transition-property: scale opacity;
+  transition-duration: 300ms;
+}
+
+.hero-button:hover {
+  scale: 1.1;
+  opacity: 90%;
+  cursor: pointer;
 }
 
 /* Main section */
@@ -209,6 +235,10 @@ h2 {
   color: #666666;
 }
 
+.categories a {
+  color: #3C2313;
+}
+
 /* Products */
 
 .products {
@@ -231,6 +261,17 @@ h2 {
   padding: 10px;
   text-align: center;
   font-weight: 700;
+  transition-property: all;
+  transition-duration: 300ms;
+}
+
+.product-card:hover {
+  cursor: pointer;
+  transform: translate(3px, -3px);
+  box-shadow: -3px 3px 0 3px #3C2313;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .product-price {
@@ -275,6 +316,10 @@ input::placeholder {
   font-size: 15px;
 }
 
+input:focus-visible {
+  box-shadow: 0px 0px 0px 3px #F0A83E;
+}
+
 .form-buttons {
   display: flex;
   justify-content: center;
@@ -289,6 +334,14 @@ input::placeholder {
   padding: 10px 20px;
   color: #fff;
   border-radius: 10px;
+  transition-property: cursor scale opacity;
+  transition-duration: 300ms;
+}
+
+.btn:hover {
+  cursor: pointer;
+  scale: 1.05;
+  opacity: 95%;
 }
 
 .btn-reset {
@@ -333,10 +386,15 @@ input::placeholder {
 .subscribe-input {
   background-color: #fff;
   flex: 1;
+  color: #3C2313;
 }
 
 .subscribe-input::placeholder {
   color: #8A8787;
+}
+
+.subscribe-input:focus-visible {
+  box-shadow: 0px 0px 0px 3px #3C2313;
 }
 
 .btn-sub {
@@ -410,6 +468,10 @@ footer {
   justify-content: center;
   gap: 15px;
   color: #fff;
+}
+
+.footer-card:hover {
+  cursor: pointer;
 }
 
 .footer-card-img {
